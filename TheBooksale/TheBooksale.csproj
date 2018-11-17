@@ -1,0 +1,768 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E6FF607-72F9-417A-8F9B-AD9A7BB3DFCB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheBooksale</RootNamespace>
+    <AssemblyName>TheBooksale</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2018.1.117.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX R1 2018\Bin45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdsDeleteConfirm.aspx" />
+    <Content Include="AdsDeleteSuccess.aspx" />
+    <Content Include="AdsDetails.aspx" />
+    <Content Include="AdsPost.aspx" />
+    <Content Include="AdsPostSuccess.aspx" />
+    <Content Include="AdsUpdate.aspx" />
+    <Content Include="BOOKS04.ICO" />
+    <Content Include="Categories.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Files\Photos\Ads\ADBAAM000001000001\mrtmap_1.jpg" />
+    <Content Include="Files\Photos\Ads\ADCACH000001000001\Lost-SeasonOne.jpg" />
+    <Content Include="Files\Photos\Ads\ADCACH000001000002\DoNotYetGatheringof50EyecaringWallpapersBamboo.jpg" />
+    <Content Include="Files\Photos\Ads\ADCACH000001000002\DoNotYetGatheringof50EyecaringWallpapersSnailintheRain.jpg" />
+    <Content Include="Files\Photos\Ads\ADCACH000001000002\DoNotYetGatheringof50EyecaringWallpapersWoodenHouse1.jpg" />
+    <Content Include="Files\Photos\Ads\ADCACH000001000003\Lost_Season_4_iPhone Wallpapers.jpg" />
+    <Content Include="Files\Photos\Ads\ADCACH000001000003\Lost_season_4_poster.jpg" />
+    <Content Include="Files\Photos\Ads\ADCACH000001000003\Lost_Season_4_PSP Wallpapers.jpg" />
+    <Content Include="Files\Photos\Ads\ADCACH000001000004\Thumb_Beyond.jpg" />
+    <Content Include="Files\Photos\Ads\ADGACH000001000001\Thumb_Anxo.jpg" />
+    <Content Include="Files\Photos\Ads\ADGACH000001000001\Thumb_Beyond.jpg" />
+    <Content Include="Files\Photos\Ads\ADGACH000001000001\Thumb_ThePassenger.jpg" />
+    <Content Include="Files\Photos\Ads\ADGACH000001000002\ToSM-aCoM-2Back.jpg" />
+    <Content Include="Files\Photos\Ads\ADGACH000001000003\PosterTwo.jpg" />
+    <Content Include="Files\Photos\Ads\ADGACH000001000004\Lost_Season_3_1024 x 768.jpg" />
+    <Content Include="Files\Photos\Ads\ADGACH000001000005\Koala.jpg" />
+    <Content Include="Files\Photos\Ads\ADGACH000002000001\iPhone5_SleepWakeRepairFree.jpg" />
+    <Content Include="Files\Photos\Ads\ADGACH000002000001\TICorruption.JPG" />
+    <Content Include="Files\Photos\Ads\ADGACH000002000002\ChristmasTree.jpg" />
+    <Content Include="Files\Photos\Ads\ADGACH000002000002\ExpressBus_652-AMKtoCBDvv.jpg" />
+    <Content Include="Files\Photos\Ads\ADGADO000001000001\IMG_5848.JPG" />
+    <Content Include="Files\Photos\Ads\ADGADO000001000001\Lost_season_4_poster.jpg" />
+    <Content Include="Files\Photos\Ads\ADGADO000001000002\Lost_Season_4_iPhone Wallpapers.jpg" />
+    <Content Include="Files\Photos\Ads\ADGADO000001000002\NoAuthor-YummyMagazine.jpg" />
+    <Content Include="Files\Photos\Ads\ADGADO000001000002\Season2Poster2.jpg" />
+    <Content Include="Files\Photos\Ads\ADGADO000001000002\Season_3.jpg" />
+    <Content Include="Files\Photos\Ads\ADGADO000001000003\TheDarkTower-InWorldMap.jpg" />
+    <Content Include="Files\Photos\Ads\ADGADO000001000004\ErnestCline-ReadyPlayerOne.jpg" />
+    <Content Include="Files\Photos\Ads\ADMACA000001000001\img6.jpg" />
+    <Content Include="Files\Photos\Ads\ADMACA000001000001\img7.jpg" />
+    <Content Include="Files\Photos\Ads\ADMAJU000001000001\scott-pilgrim-vs-the-world-01.jpg" />
+    <Content Include="Files\Photos\Ads\ADTOAL000001000001\PCX_860.jpg" />
+    <Content Include="Files\Photos\Ads\ADTOAL000001000002\mrtmap_1.jpg" />
+    <Content Include="Files\Photos\Ads\ADTOAL000001000003\seasonscard.jpg" />
+    <Content Include="Files\Photos\Ads\ADTOAL000001000003\space-desktop.JPG" />
+    <Content Include="Files\Photos\Samples\ad.jpg" />
+    <Content Include="Files\Photos\Samples\user.png" />
+    <Content Include="Files\Photos\Sponsors\Lulu-James.jpg" />
+    <Content Include="Files\Photos\Users\BAAM000001\user7.jpg" />
+    <Content Include="Files\Photos\Users\CACH000001\Lost_Season_4_PSP Wallpapers.jpg" />
+    <Content Include="Files\Photos\Users\CACH000001\user3.jpg" />
+    <Content Include="Files\Photos\Users\GACH000001\seasonscard.jpg" />
+    <Content Include="Files\Photos\Users\GACH000001\user8.jpg" />
+    <Content Include="Files\Photos\Users\GACH000002\user6.jpg" />
+    <Content Include="Files\Photos\Users\GACH000002\user8.jpg" />
+    <Content Include="Files\Photos\Users\GADO000001\3d-mac-os-x-wallpaper.jpg" />
+    <Content Include="Files\Photos\Users\GADO000001\user1.jpg" />
+    <Content Include="Files\Photos\Users\GAJA000001\ChristmasTree.jpg" />
+    <Content Include="Files\Photos\Users\MACA000001\user2.jpg" />
+    <Content Include="Files\Photos\Users\MACA000001\user5.jpg" />
+    <Content Include="Files\Photos\Users\MAJU000001\PCX_860.jpg" />
+    <Content Include="Files\Photos\Users\MAJU000001\user4.jpg" />
+    <Content Include="Files\Photos\Users\TOAL000001\user2.jpg" />
+    <Content Include="Files\Photos\Users\user.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="ForgotPasswordSuccess.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Docs\Help\TheBooksale_UserGuide_V1-0.pdf" />
+    <None Include="Properties\PublishProfiles\thebooksale - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="InfoDisclaimer.aspx" />
+    <Content Include="InfoFaq.aspx" />
+    <Content Include="InfoPrivacy.aspx" />
+    <Content Include="InfoTerms.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Main.aspx" />
+    <Content Include="ProfileAds.aspx" />
+    <Content Include="ProfileRatings.aspx" />
+    <Content Include="RepDashboard.aspx" />
+    <Content Include="RepOffers.aspx" />
+    <Content Include="ReuseAbout.html" />
+    <Content Include="ReuseCopyright.html" />
+    <Content Include="ReuseLinks.html" />
+    <Content Include="ReuseTestimonials.html" />
+    <Content Include="ReviewForBuyer.aspx" />
+    <Content Include="ReviewForSeller.aspx" />
+    <Content Include="ReviewSuccess.aspx" />
+    <Content Include="SearchResults.aspx" />
+    <Content Include="SignUpSuccess.aspx" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\external\jquery\jquery.js" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\animated-overlay.gif" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\index.html" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\jquery-ui.css" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\jquery-ui.js" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\jquery-ui.min.css" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\jquery-ui.min.js" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\jquery-ui.structure.css" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\jquery-ui.structure.min.css" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\jquery-ui.theme.css" />
+    <Content Include="Styles\Classix\assets\js\jquery-ui-1.11.0\jquery-ui.theme.min.css" />
+    <Content Include="Styles\images\favicon.png" />
+    <Content Include="Styles\images\Logo.png" />
+    <Content Include="UserAccount.aspx" />
+    <Content Include="ReuseNavbarBasic.html" />
+    <Content Include="ReuseNavbar.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="SignUp.aspx" />
+    <Content Include="Site.Master" />
+    <Content Include="Styles\Classix\assets\css\blogpage.css" />
+    <Content Include="Styles\Classix\assets\css\bootstrap-select.min.css" />
+    <Content Include="Styles\Classix\assets\css\bootstrap.min.css" />
+    <Content Include="Styles\Classix\assets\css\carousel-slider.css" />
+    <Content Include="Styles\Classix\assets\css\contacts.css" />
+    <Content Include="Styles\Classix\assets\css\custom-components.css" />
+    <Content Include="Styles\Classix\assets\css\fileinput.css" />
+    <Content Include="Styles\Classix\assets\css\font-awesome.min.css" />
+    <Content Include="Styles\Classix\assets\css\global.css" />
+    <Content Include="Styles\Classix\assets\css\jasny-bootstrap.min.css" />
+    <Content Include="Styles\Classix\assets\css\main.css" />
+    <Content Include="Styles\Classix\assets\css\material-kit.css" />
+    <Content Include="Styles\Classix\assets\css\nav-menu.css" />
+    <Content Include="Styles\Classix\assets\css\presets.css" />
+    <Content Include="Styles\Classix\assets\css\responsive.css" />
+    <Content Include="Styles\Classix\assets\css\slicknav.css" />
+    <Content Include="Styles\Classix\assets\extras\animate.css" />
+    <Content Include="Styles\Classix\assets\extras\owl.carousel.css" />
+    <Content Include="Styles\Classix\assets\extras\owl.theme.css" />
+    <Content Include="Styles\Classix\assets\extras\settings.css" />
+    <Content Include="Styles\Classix\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Styles\Classix\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Styles\Classix\assets\fonts\line-icons\demo-files\demo.css" />
+    <Content Include="Styles\Classix\assets\fonts\line-icons\demo-files\demo.js" />
+    <Content Include="Styles\Classix\assets\fonts\line-icons\demo.html" />
+    <Content Include="Styles\Classix\assets\fonts\line-icons\fonts\Linearicons-Free.svg" />
+    <Content Include="Styles\Classix\assets\fonts\line-icons\line-icons.css" />
+    <Content Include="Styles\Classix\assets\fonts\line-icons\Read Me.txt" />
+    <Content Include="Styles\Classix\assets\img\about.jpg" />
+    <Content Include="Styles\Classix\assets\img\banner1.jpg" />
+    <Content Include="Styles\Classix\assets\img\banner2.jpg" />
+    <Content Include="Styles\Classix\assets\img\banner3.jpg" />
+    <Content Include="Styles\Classix\assets\img\bg\app-bg.jpg" />
+    <Content Include="Styles\Classix\assets\img\bg\app-bg.png" />
+    <Content Include="Styles\Classix\assets\img\bg\bg-intro.png" />
+    <Content Include="Styles\Classix\assets\img\bg\bg-overlay.png" />
+    <Content Include="Styles\Classix\assets\img\bg\bg.jpg" />
+    <Content Include="Styles\Classix\assets\img\bg\bg1.jpg" />
+    <Content Include="Styles\Classix\assets\img\bg\counter-bg.jpg" />
+    <Content Include="Styles\Classix\assets\img\blog\author.jpg" />
+    <Content Include="Styles\Classix\assets\img\blog\blog1.jpg" />
+    <Content Include="Styles\Classix\assets\img\blog\blog2.jpg" />
+    <Content Include="Styles\Classix\assets\img\blog\blog3.jpg" />
+    <Content Include="Styles\Classix\assets\img\blog\image.jpg" />
+    <Content Include="Styles\Classix\assets\img\blog\img-1.jpg" />
+    <Content Include="Styles\Classix\assets\img\blog\user1.jpg" />
+    <Content Include="Styles\Classix\assets\img\blog\user2.jpg" />
+    <Content Include="Styles\Classix\assets\img\blog\user3.jpg" />
+    <Content Include="Styles\Classix\assets\img\category\img-1.png" />
+    <Content Include="Styles\Classix\assets\img\category\img-10.png" />
+    <Content Include="Styles\Classix\assets\img\category\img-11.png" />
+    <Content Include="Styles\Classix\assets\img\category\img-12.png" />
+    <Content Include="Styles\Classix\assets\img\category\img-2.png" />
+    <Content Include="Styles\Classix\assets\img\category\img-3.png" />
+    <Content Include="Styles\Classix\assets\img\category\img-4.png" />
+    <Content Include="Styles\Classix\assets\img\category\img-5.png" />
+    <Content Include="Styles\Classix\assets\img\category\img-6.png" />
+    <Content Include="Styles\Classix\assets\img\category\img-7.png" />
+    <Content Include="Styles\Classix\assets\img\category\img-8.png" />
+    <Content Include="Styles\Classix\assets\img\category\img-9.png" />
+    <Content Include="Styles\Classix\assets\img\dummy.png" />
+    <Content Include="Styles\Classix\assets\img\favicon.png" />
+    <Content Include="Styles\Classix\assets\img\featured\img1.jpg" />
+    <Content Include="Styles\Classix\assets\img\featured\img2.jpg" />
+    <Content Include="Styles\Classix\assets\img\featured\img3.jpg" />
+    <Content Include="Styles\Classix\assets\img\featured\img4.jpg" />
+    <Content Include="Styles\Classix\assets\img\featured\img5.jpg" />
+    <Content Include="Styles\Classix\assets\img\featured\img6.jpg" />
+    <Content Include="Styles\Classix\assets\img\img1.jpg" />
+    <Content Include="Styles\Classix\assets\img\item\img-1.jpg" />
+    <Content Include="Styles\Classix\assets\img\item\img-2.jpg" />
+    <Content Include="Styles\Classix\assets\img\item\img-3.jpg" />
+    <Content Include="Styles\Classix\assets\img\item\img-35.jpg" />
+    <Content Include="Styles\Classix\assets\img\item\img-4.jpg" />
+    <Content Include="Styles\Classix\assets\img\item\img-5.jpg" />
+    <Content Include="Styles\Classix\assets\img\item\img-6.jpg" />
+    <Content Include="Styles\Classix\assets\img\logo.png" />
+    <Content Include="Styles\Classix\assets\img\map-marker.png" />
+    <Content Include="Styles\Classix\assets\img\post\thumb1.jpg" />
+    <Content Include="Styles\Classix\assets\img\post\thumb2.jpg" />
+    <Content Include="Styles\Classix\assets\img\post\thumb3.jpg" />
+    <Content Include="Styles\Classix\assets\img\productinfo\img1.jpeg" />
+    <Content Include="Styles\Classix\assets\img\productinfo\img1.jpg" />
+    <Content Include="Styles\Classix\assets\img\productinfo\img2.jpg" />
+    <Content Include="Styles\Classix\assets\img\productinfo\img3.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img1.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img10.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img11.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img12.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img13.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img14.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img2.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img3.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img4.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img5.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img6.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img7.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img8.jpg" />
+    <Content Include="Styles\Classix\assets\img\product\img9.jpg" />
+    <Content Include="Styles\Classix\assets\img\slider\girl1.png" />
+    <Content Include="Styles\Classix\assets\img\slider\img1.jpg" />
+    <Content Include="Styles\Classix\assets\img\slider\slide1.jpg" />
+    <Content Include="Styles\Classix\assets\img\slider\slide2.jpg" />
+    <Content Include="Styles\Classix\assets\img\slider\slide3.jpg" />
+    <Content Include="Styles\Classix\assets\img\user.jpg" />
+    <Content Include="Styles\Classix\assets\js\bootstrap-select.min.js" />
+    <Content Include="Styles\Classix\assets\js\bootstrap.min.js" />
+    <Content Include="Styles\Classix\assets\js\contact-form-script.js" />
+    <Content Include="Styles\Classix\assets\js\fileinput.js" />
+    <Content Include="Styles\Classix\assets\js\form-validator.min.js" />
+    <Content Include="Styles\Classix\assets\js\jasny-bootstrap.min.js" />
+    <Content Include="Styles\Classix\assets\js\jquery-min.js" />
+    <Content Include="Styles\Classix\assets\js\jquery.counterup.min.js" />
+    <Content Include="Styles\Classix\assets\js\jquery.parallax.js" />
+    <Content Include="Styles\Classix\assets\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="Styles\Classix\assets\js\jquery.themepunch.tools.min.js" />
+    <Content Include="Styles\Classix\assets\js\main.js" />
+    <Content Include="Styles\Classix\assets\js\material-kit.js" />
+    <Content Include="Styles\Classix\assets\js\material.min.js" />
+    <Content Include="Styles\Classix\assets\js\owl.carousel.min.js" />
+    <Content Include="Styles\Classix\assets\js\waypoints.min.js" />
+    <Content Include="Styles\Classix\assets\js\wow.js" />
+    <Content Include="Styles\images\BOOKS01.ICO" />
+    <Content Include="UserAccountSuccess.aspx" />
+    <Content Include="UserAds.aspx" />
+    <Content Include="UserDeleteConfirm.aspx" />
+    <Content Include="UserDeleteSuccess.aspx" />
+    <Content Include="UserReports.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdsDeleteConfirm.aspx.cs">
+      <DependentUpon>AdsDeleteConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdsDeleteConfirm.aspx.designer.cs">
+      <DependentUpon>AdsDeleteConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdsDeleteSuccess.aspx.cs">
+      <DependentUpon>AdsDeleteSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdsDeleteSuccess.aspx.designer.cs">
+      <DependentUpon>AdsDeleteSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdsDetails.aspx.cs">
+      <DependentUpon>AdsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdsDetails.aspx.designer.cs">
+      <DependentUpon>AdsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdsPost.aspx.cs">
+      <DependentUpon>AdsPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdsPost.aspx.designer.cs">
+      <DependentUpon>AdsPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdsPostSuccess.aspx.cs">
+      <DependentUpon>AdsPostSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdsPostSuccess.aspx.designer.cs">
+      <DependentUpon>AdsPostSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdsUpdate.aspx.cs">
+      <DependentUpon>AdsUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdsUpdate.aspx.designer.cs">
+      <DependentUpon>AdsUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPasswordSuccess.aspx.cs">
+      <DependentUpon>ForgotPasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ForgotPasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="InfoDisclaimer.aspx.cs">
+      <DependentUpon>InfoDisclaimer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoDisclaimer.aspx.designer.cs">
+      <DependentUpon>InfoDisclaimer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoFaq.aspx.cs">
+      <DependentUpon>InfoFaq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoFaq.aspx.designer.cs">
+      <DependentUpon>InfoFaq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoPrivacy.aspx.cs">
+      <DependentUpon>InfoPrivacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoPrivacy.aspx.designer.cs">
+      <DependentUpon>InfoPrivacy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoTerms.aspx.cs">
+      <DependentUpon>InfoTerms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoTerms.aspx.designer.cs">
+      <DependentUpon>InfoTerms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileAds.aspx.cs">
+      <DependentUpon>ProfileAds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfileAds.aspx.designer.cs">
+      <DependentUpon>ProfileAds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileRatings.aspx.cs">
+      <DependentUpon>ProfileRatings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfileRatings.aspx.designer.cs">
+      <DependentUpon>ProfileRatings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepDashboard.aspx.cs">
+      <DependentUpon>RepDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepDashboard.aspx.designer.cs">
+      <DependentUpon>RepDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepOffers.aspx.cs">
+      <DependentUpon>RepOffers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepOffers.aspx.designer.cs">
+      <DependentUpon>RepOffers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewForBuyer.aspx.cs">
+      <DependentUpon>ReviewForBuyer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewForBuyer.aspx.designer.cs">
+      <DependentUpon>ReviewForBuyer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewForSeller.aspx.cs">
+      <DependentUpon>ReviewForSeller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewForSeller.aspx.designer.cs">
+      <DependentUpon>ReviewForSeller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewSuccess.aspx.cs">
+      <DependentUpon>ReviewSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewSuccess.aspx.designer.cs">
+      <DependentUpon>ReviewSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResults.aspx.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchResults.aspx.designer.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpSuccess.aspx.cs">
+      <DependentUpon>SignUpSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUpSuccess.aspx.designer.cs">
+      <DependentUpon>SignUpSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccount.aspx.cs">
+      <DependentUpon>UserAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAccount.aspx.designer.cs">
+      <DependentUpon>UserAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccountSuccess.aspx.cs">
+      <DependentUpon>UserAccountSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAccountSuccess.aspx.designer.cs">
+      <DependentUpon>UserAccountSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAds.aspx.cs">
+      <DependentUpon>UserAds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAds.aspx.designer.cs">
+      <DependentUpon>UserAds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDeleteConfirm.aspx.cs">
+      <DependentUpon>UserDeleteConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDeleteConfirm.aspx.designer.cs">
+      <DependentUpon>UserDeleteConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDeleteSuccess.aspx.cs">
+      <DependentUpon>UserDeleteSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDeleteSuccess.aspx.designer.cs">
+      <DependentUpon>UserDeleteSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserReports.aspx.cs">
+      <DependentUpon>UserReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserReports.aspx.designer.cs">
+      <DependentUpon>UserReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Styles\Classix\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Styles\Classix\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Styles\Classix\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Styles\Classix\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Styles\Classix\assets\fonts\FontAwesome.otf" />
+    <Content Include="Styles\Classix\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Styles\Classix\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Styles\Classix\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Styles\Classix\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Styles\Classix\assets\fonts\line-icons\fonts\Linearicons-Free.eot" />
+    <Content Include="Styles\Classix\assets\fonts\line-icons\fonts\Linearicons-Free.ttf" />
+    <Content Include="Styles\Classix\assets\fonts\line-icons\fonts\Linearicons-Free.woff" />
+    <Content Include="Styles\Classix\assets\fonts\line-icons\fonts\Linearicons-Free.woff2" />
+    <Content Include="Styles\Classix\assets\fonts\line-icons\selection.json" />
+    <Content Include="Styles\Classix\assets\img\.DS_Store" />
+    <Content Include="Styles\Classix\assets\img\bg\.DS_Store" />
+    <Content Include="Styles\Classix\assets\less\blogpage.less" />
+    <Content Include="Styles\Classix\assets\less\carousel-slider.less" />
+    <Content Include="Styles\Classix\assets\less\contacts.less" />
+    <Content Include="Styles\Classix\assets\less\custom-components.less" />
+    <Content Include="Styles\Classix\assets\less\global.less" />
+    <Content Include="Styles\Classix\assets\less\main.less" />
+    <Content Include="Styles\Classix\assets\less\nav-menu.less" />
+    <Content Include="Styles\Classix\assets\less\presets.less" />
+    <Content Include="Styles\Classix\assets\less\responsive.less" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Styles\images\BOOKS01.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51200</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51200/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
